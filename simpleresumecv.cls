@@ -20,9 +20,9 @@
 % Run in non-stop mode.
 \DeclareOption{nonstopmode}{\nonstopmode}
 
-% Draft mode.
-\newcommand{\TypesetInDraftMode}{0}
-\DeclareOption{draftmode}{\renewcommand{\TypesetInDraftMode}{1}}
+
+
+
 
 % Datestamp format (default): {yyyy}{MM}{dd} ---> MMM yyyy (e.g., Jan 2008).
 \newcommand{\DatestampYMD}[3]{\mbox{\ShortMonth{#2} #1}}
@@ -153,28 +153,17 @@ BoldItalicFont=Tinos-BoldItalic]
 \newcommand{\UseSubTitleFont}{\normalfont\fontsize{8.6pt}{10.3pt}\selectfont}
 \newcommand{\UseSectionFont}{\UseHeadingFont\fontsize{9pt}{11pt}\selectfont\bfseries}
 \newcommand{\UseSubSectionFont}{\UseHeadingFont\fontsize{8.6pt}{10.3pt}\selectfont\bfseries}
-\newcommand{\UseDetailFont}{\normalfont\fontsize{8.6pt}{10.3pt}\selectfont}
+\newcommand{\UseDetailFont}{\normalfont\fontsize{8.8pt}{10.3pt}\selectfont}
 
 % Symbols (Unicode).
 % See: https://unicode-table.com/en/
-\newcommand{\BulletSymbol}{{\normalfont\fontsize{6.5}{7.8}\selectfont\raisebox{0.17em}{\char"25A0}}}
+\newcommand{\BulletSymbol}{{\normalfont\fontsize{6}{7.2}\selectfont\raisebox{0.17em}{\char"25CF}}}
 \newcommand{\SubBulletSymbol}{{\normalfont\fontsize{6}{7.2}\selectfont\raisebox{0.17em}{\char"25CF}}}
 \newcommand{\TildeSymbol}{{\normalfont\char"007E}}
 
-% Headers and footers: Blank header and footer
-\AtEndDocument{\null\label{LastPage}}
-\newcommand{\PageKOfN}{{\UseHeaderFooterFont{Page}~\thepage~of~\pageref{LastPage}}}
-\newcommand{\DraftStamp}{{\UseHeaderFooterFont\color{red}DRAFT~\Timestamp}}
 
-\ifnum\TypesetInDraftMode=0
 \newcommand{\HeaderText}{}
 \newcommand{\FooterText}{\hfill\hfill}
-\else
-\newcommand{\HeaderText}{}
-\newcommand{\FooterText}{\null\hphantom{\DraftStamp}\hfill%
-	\PageKOfN\hfill%
-	\DraftStamp\null}
-\fi
 
 \def\ps@plain{%
 	\def\@oddhead{\HeaderText}%
@@ -196,8 +185,6 @@ BoldItalicFont=Tinos-BoldItalic]
 % Avoid overfull lines.
 \sloppy
 
-% Footnotes: Use symbols instead of numbers for labels.
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 % Macro: Title (name).
 \newcommand{\Title}[1]{%
@@ -228,7 +215,7 @@ BoldItalicFont=Tinos-BoldItalic]
 			\setlength\parskip{0in}%
 			\setlength\topsep{0in}%
 			\setlength\parsep{0in}%
-			\setlength\itemsep{.90\baselineskip}%
+			\setlength\itemsep{.7\baselineskip}%
 			\setlength\partopsep{0in}%
 			\raggedright%
 		}%
@@ -267,22 +254,22 @@ BoldItalicFont=Tinos-BoldItalic]
 \newsavebox{\BulletItemIndentBox}
 \newlength{\BulletItemIndentWidth}
 %
-\newcommand{\BulletItem}
+\newcommand{\BulletItem}[1]
 {\par\vspace{0\baselineskip}%
 	\savebox{\BulletItemIndentBox}{\hspace{1.5mm}\BulletSymbol\hspace{1.5mm}}%
 	\usebox{\BulletItemIndentBox}%
-	\ignorespaces%
+	\ignorespaces #1\\%
 }
 
 % Macro: SubBulletItem.
 \newsavebox{\SubBulletItemIndentBox}
 \newlength{\SubBulletItemIndentWidth}
 %
-\newcommand{\SubBulletItem}
+\newcommand{\SubBulletItem}[1]
 {\par\vspace{0\baselineskip}%
-	\savebox{\SubBulletItemIndentBox}{\hspace{5.6mm}\SubBulletSymbol\hspace{1.5mm}}
+	\savebox{\SubBulletItemIndentBox}{\hspace{1.5mm}\SubBulletSymbol\hspace{1.5mm}}
 	\usebox{\SubBulletItemIndentBox}%
-	\ignorespaces%
+	\ignorespaces #1%
 }
 
 % Macro: Entry.
