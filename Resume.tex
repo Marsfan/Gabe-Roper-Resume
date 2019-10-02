@@ -4,7 +4,7 @@
 % vim: set fenc=utf-8
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Resume.tex
+%% CV.tex
 %% <https://github.com/zachscrivena/simple-resume-cv>
 %% This is free and unencumbered software released into the
 %% public domain; see <http://unlicense.org> for details.
@@ -13,6 +13,7 @@
 % See "README.md" for instructions on compiling this document.
 
 \documentclass[letterpaper,ddMMMyyyy,nonstopmode]{simpleresumecv}
+\usepackage[document]{ragged2e}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	Uncomment to display a grid on the document to help with alinment	%%
@@ -54,20 +55,20 @@
 
 % PDF settings and properties.
 \hypersetup{
-pdftitle={\CVTitle},
-pdfauthor={\CVAuthor},
-pdfsubject={\LinkedInPage},
-pdfcreator={XeLaTeX},
-pdfproducer={},
-pdfkeywords={},
-unicode=true,
-bookmarks=true,
-bookmarksopen=true,
-pdfstartview=FitH,
-pdfpagelayout=OneColumn,
-pdfpagemode=UseOutlines,
-hidelinks,
-breaklinks}
+	pdftitle={\CVTitle},
+	pdfauthor={\CVAuthor},
+	pdfsubject={\LinkedInPage},
+	pdfcreator={XeLaTeX},
+	pdfproducer={},
+	pdfkeywords={},
+	unicode=true,
+	bookmarks=true,
+	bookmarksopen=true,
+	pdfstartview=FitH,
+	pdfpagelayout=OneColumn,
+	pdfpagemode=UseOutlines,
+	hidelinks,
+	breaklinks}
 
 % Shorthand.
 \newcommand{\Code}[1]{\mbox{\textbf{#1}}}
@@ -78,176 +79,168 @@ breaklinks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-%%%%%%%%%%%%%%%
-% TITLE BLOCK %
-%%%%%%%%%%%%%%%
-\Title{\CVAuthor}
-
-\begin{SubTitle}
-{\streetAddress}
-\par
-\href{mailto:\emailAddress}
-{\emailAddress}
-\,\SubBulletSymbol\,
-\phoneNumber
-\,\SubBulletSymbol\,
-\href{\LinkedInPage}
-{\url{\LinkedInPage}},
-\,\SubBulletSymbol\,
-\href{\GithubPage}
-{\url{\GithubPage}}
-\end{SubTitle}
-
-\begin{Body}
-
 	%%%%%%%%%%%%%%%
-	%% EDUCATION %%
+	% TITLE BLOCK %
 	%%%%%%%%%%%%%%%
-
-	\Section
-	{Education}
-	{Education}
-	{PDF:Education}
-
-	\Entry
-		\href{https://prescott.erau.edu}{\textbf{Embry-Riddle Aeronautical University}},
+	\Title{\CVAuthor}
+	
+	\begin{SubTitle}
+		{\streetAddress}
+		\par
+		\href{mailto:\emailAddress}{\emailAddress}
+		\SubBulletSymbol
+		\,\,\phoneNumber\,
+		\SubBulletSymbol
+		\,\,\href{\LinkedInPage}{\url{\LinkedInPage}}
+		\SubBulletSymbol
+		\,\,\href{\GithubPage}{\url{\GithubPage}}
+	\end{SubTitle}
+	
+	\begin{Body}
+		
+		%%%%%%%%%%%%%%%
+		%% EDUCATION %%
+		%%%%%%%%%%%%%%%
+		
+		\Section
+		{Education}
+		{Education}
+		{PDF:Education}
+		
+		\Entry
+		\href{https://prescott.erau.edu}{\textbf{Embry-Riddle Aeronautical University}}
 		\hfill Prescott, Arizona
-
+		
 		Bachelor of Science in Electrical Engineering
-		\hfill\ymRange{2017}{08}{2021}{05}
-
+		\hfill Expected May 2021
+		
 		Concentration: Robotics
 		\hfill GPA: 3.689
-
-	%%%%%%%%%%%%%%%%%%%%%%%%%
-	%% Leadership Activities %%
-	%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\Section
-	{Leadership/\newline Activities}
-	{Leadership/Activities}
-	{PDF:Leadership/Activities}
-
-	\Entry
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%
+		%% Leadership Activities %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\Section
+		{Leadership/\newline Activities}
+		{Leadership/Activities}
+		{PDF:Leadership/Activities}
+		
+		\Entry
 		\textbf{EagleSat}
 		\hfill\yearRange{2017}{Present}
 		\begin{Detail}
 			\Item
-				\begin{minipage}{\descriptionWidth}
-					Member of the Electrical Power System team, developing the power subsystems for a student-designed and built CubeSat that will analyze the effect of cosmic radiation on flash memory, and look for cosmic rays.
-				\end{minipage}
+			\begin{minipage}{\descriptionWidth}
+				Member of the Electrical Power System team, developing the power subsystems for a student-designed and built CubeSat that will analyze the effect of cosmic radiation on flash memory and look for cosmic rays.
+			\end{minipage}
 		\end{Detail}
-	\Gap
-
-
-	\Entry
+		\Gap
+		
+		
+		\Entry
 		\textbf{Eagle Aero Sport}
 		\hfill\yearRange{2017}{Present}
 		\begin{Detail}
 			\Item
-				\begin{minipage}{\descriptionWidth}
-					Member of electrical engineering team that is mounting a number of sensors to a student-built Van's RV-12 for analyzing the stress and aerodynamic effects on the aircraft.
-				\end{minipage}
+			\begin{minipage}{\descriptionWidth}
+				Member of electrical engineering team that is mounting a number of sensors to a student-built Van's RV-12 Light Sport Aircraft for analyzing the stress and aerodynamic effects on the aircraft.
+			\end{minipage}
 		\end{Detail}
-	\BigGap
-	\Entry
-		\textbf{CHS FIRST Robotics Team}
+		\Gap
+		\Entry
+		\textbf{Coppell High School FIRST Robotics Team}
 		\hfill\yearRange{2013}{2017}
 		\begin{Detail}
 			\Item
-				\begin{minipage}{\descriptionWidth}
-					Student-Built Android based robots that compete in First Tech Challenge
-					\SubBulletItem Programming Leader, Fall 2015-Sprint 2017
-					\SubBulletItem Co-Captain, Fall 2016-Spring 2017
-					\SubBulletItem Fundraising Leader, Sprint 2014-Spring 2017
-				\end{minipage}
+			\begin{minipage}{\descriptionWidth}
+				Student-Built Android based robots that compete in First Tech Challenge.
+				\SubBulletItem Programming Leader, Fall 2015-Sprint 2017
+				\SubBulletItem Co-Captain, Fall 2016-Spring 2017
+				\SubBulletItem Fundraising Leader, Sprint 2014-Spring 2017
+			\end{minipage}
 		\end{Detail}
-
-	\Gap
-	\Entry
+		
+		\Gap
+		
+		\Entry
 		\textbf{Boy Scout Troop 845, Boy Scouts of America, Circle 10 Council}
 		\hfill\yearRange{2013}{2017}
 		\begin{Detail}
 			\Item
 			\begin{minipage}{\descriptionWidth}
-			 Youth Organization that promotes leadership and responsibility
-			\SubBulletItem Eagle Scout
-			\SubBulletItem Patrol Leader, Purple Platypi, 2013-2014
-			\SubBulletItem Interim Senior Patrol Leader, July 2014 Summer Camp
-						\end{minipage}
+				Youth Organization that promotes leadership and responsibility.
+				\SubBulletItem Eagle Scout
+				\SubBulletItem Patrol Leader, Purple Platypi, 2013-2014
+				\SubBulletItem Interim Senior Patrol Leader, July 2014 Summer Camp
+			\end{minipage}	
 		\end{Detail}
-
-
-	%%%%%%%%%%%%%%%%%%%%%
-	%% Research		   %%
-	%%%%%%%%%%%%%%%%%%%%%
-
-	\Section
-	{Research}
-	{Research}
-	{PDF:Research}
-
-	\Entry
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%
+		%% Research		   %%
+		%%%%%%%%%%%%%%%%%%%%%
+		\Section
+		{Research}
+		{Research}
+		{PDF:Research}
+		
+		\Entry
 		\textbf{Pulsed Plasma Thruster}
 		\hfill
 		\yearRange{2019}{Present}
-
+		
 		\begin{Detail}
 			\Item
 			\begin{minipage}{\descriptionWidth}
-				Project currently developing a pulsed plasma thruster for cubesat spacecraft.
+				Project currently developing a pulsed plasma thruster for cubesat spacecraft. 
 			\end{minipage}
 		\end{Detail}
-
-
-	%%%%%%%%%%%%%%%%%%%%%
-	%% Work Experience %%
-	%%%%%%%%%%%%%%%%%%%%%
-
-	\Section
-	{Work Experience}
-	{Work Experience}
-	{PDF:Work Experience}
-
-	\Entry
-	\textbf{Usedave.com}\hfill \ymRange{2015}{06}{2015}{08}
-	\begin{Detail}
-		\textit{Freelance 3D Modeling}
-		\Item
-		\begin{minipage}{\descriptionWidth}
-			Created 3D models for corporate internal marketing comic book.
-		\end{minipage}
-	\end{Detail}
-	\Gap
-
-	\Entry
-	\textbf{National Aeronautics and Space Administration}\hfill\ymRange{2018}{06}{2018}{08}
-	\begin{Detail}
-		\textit{Human-Spacesuit Integration Intern -- Anthropometrics and Biomechanics Facility}
-		\Item
-		\begin{minipage}{\descriptionWidth}
-			Developed software for analyzing human-spacesuit interaction
-		\end{minipage}
-	\end{Detail}
-	\Gap
-
-	\Entry
-	\textbf{L3Harris ACSS}\hfill\ymRange{2019}{05}{2019}{08}
-	\begin{Detail}
-		\textit{Electrical Engineering Intern}
-		\Item
-		\begin{minipage}{\descriptionWidth}
-			Developed Software to automate production and testing of commercial aircraft collision avoidance systems.
-		\end{minipage}
-	\end{Detail}
-
-
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	%%       Skills          %%
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\Section{Skills}{Skills}{PDF: Skills}
-	% The hspace is needed here to shift this over correctly.
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%
+		%% Work Experience %%
+		%%%%%%%%%%%%%%%%%%%%%
+		
+		\Section
+		{Work Experience}
+		{Work Experience}
+		{PDF:Work Experience}
+		\Entry\textbf{L3Harris ACSS}\hfill\ymRange{2019}{05}{2019}{08}
+		\begin{Detail}
+			\textit{Electrical Engineering Intern}
+			\Item 
+			\begin{minipage}{\descriptionWidth}
+				Developed Software to automate production and testing of commercial aircraft collision avoidance systems.
+			\end{minipage}
+		\end{Detail}
+		\Gap
+		\Entry\textbf{National Aeronautics and Space Administration}\hfill\ymRange{2018}{06}{2018}{08}
+		\begin{Detail}
+			\textit{Human-Spacesuit Integration Intern -- Anthropometrics and Biomechanics Facility}
+			\Item 
+			\begin{minipage}{\descriptionWidth}
+				Developed software for analyzing human-spacesuit interaction to improve the ergonomics of spacesuits.
+			\end{minipage}
+		\end{Detail}
+		\Gap	
+		\Entry\textbf{Usedave.com}\hfill\ymRange{2015}{06}{2015}{08}
+		\begin{Detail}
+			\textit{Freelance 3D Modeling}
+			\Item 
+			\begin{minipage}{\descriptionWidth}
+				Created 3D models using Blender and Sketchup for corporate internal marketing comic book.
+			\end{minipage}
+		\end{Detail}
+		
+		
+		
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%%       Skills          %%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		
+		\Section{Skills}{Skills}{PDF: Skills}
+		% The hspace is needed here to shift this over correctly. 
 		\def\arraystretch{0}%  1 is the default, change whatever you need
 		\hspace*{-0.8em}
 		\begin{tabular}[t]{p{5em} p{\tableWidth}}
@@ -259,37 +252,39 @@ breaklinks}
 			\begin{Detail}
 				Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Publisher, LibreOffice Suite
 			\end{Detail}\\
-			\textit{Other Software} &
+			\textit{Other Software}&
 			\begin{Detail}
-				Blender Animation \newline
+				Blender Animation\newline~\newline
 			\end{Detail}\\
 			\textit{Programming Languages} &
 			\begin{Detail}
-				Arduino, Python, MATLAB, C, Basic VHDL\newline
+				Arduino, Python, MATLAB, C, Basic VHDL\newline~\newline
 			\end{Detail}\\
 			\textit{Technical}&
 			\begin{Detail}
 				Woodworking, Soldering, PCB Design, 3D Printing
-			\end{Detail}
+			\end{Detail}		
 		\end{tabular}
-	\Section{Licenses and Certifications}{Licenses and Certifications}{PDF: Licenses and Certifications}
-
-	\Entry FCC Amateur Radio Technician
-	\Entry CATIA Associate - Part Design
-	\Entry CITI Program Responsible Conduct in Research
-	\Entry SOLIDWORKS Mechanical Design Associate
-
-	%%%%%%%%%%%%
-	%% AWARDS %%
-	%%%%%%%%%%%%
-
-	\Section
-	{Awards}
-	{Awards}
-	{PDF:Awards}
-
-	\Entry NASA High School Aerospace Scholar
-	\Entry National Merit Commended Student
-\end{Body}
-
+		
+		
+		\Section{Licenses and Certifications}{Licenses and Certifications}{PDF: Licenses and Certifications}
+		
+		\Entry FCC Amateur Radio Technician
+		\Entry CATIA Associate - Part Design
+		\Entry CITI Program Responsible Conduct in Research
+		\Entry SOLIDWORKS Mechanical Design Associate
+		
+		%%%%%%%%%%%%
+		%% AWARDS %%
+		%%%%%%%%%%%%
+		
+		\Section
+		{Awards}
+		{Awards}
+		{PDF:Awards}
+		
+		\Entry NASA High School Aerospace Scholar
+		\Entry National Merit Commended Student
+	\end{Body}
+	
 \end{document}
