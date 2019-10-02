@@ -1,5 +1,7 @@
+distro: bionic
 language: minimal
 before_install:
+- sudo apt-get update
 - sudo apt-get install -y texlive-xetex texlive-full
 script:
 - xelatex Resume.tex
@@ -16,4 +18,5 @@ deploy:
   on:
     repo: Marsfan/Gabriel-Roper-Resume
     overwrite: true
+    skip_cleanup: true
     name: Resume $TRAVIS_TAG
