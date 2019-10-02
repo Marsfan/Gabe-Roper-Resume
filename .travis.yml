@@ -15,6 +15,5 @@ deploy:
   file: Resume.pdf
   on:
     repo: Marsfan/Gabriel-Roper-Resume
-    branch: master
     overwrite: true
     name: Resume $TRAVIS_TAG
