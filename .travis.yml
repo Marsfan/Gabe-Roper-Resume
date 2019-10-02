@@ -5,7 +5,7 @@ branches:
   - master
 before_install:
 - sudo apt-get update
-- sudo apt-get install -y texlive-xetex texlive-full
+- sudo apt-get install -y  texlive-xetex texlive-generic-extra texlive-fonts-recommended lmodern
 script:
 - xelatex Resume.tex
 before_deploy:
