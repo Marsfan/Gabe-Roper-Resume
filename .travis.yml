@@ -17,6 +17,5 @@ deploy:
   file: Resume.pdf
   on:
     repo: Marsfan/Gabriel-Roper-Resume
-    overwrite: true
     skip_cleanup: true
     name: Resume $TRAVIS_TAG
