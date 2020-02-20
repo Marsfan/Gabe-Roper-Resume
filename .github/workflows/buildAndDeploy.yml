@@ -31,7 +31,7 @@ jobs:
               with:
                   tag_name: ${{steps.getdate.outputs.dtVal}}
                   release_name: Resume ${{steps.getdate.outputs.dtVal}}
-                  draft: true
+                  draft: false
                   prerelease: false
 
             - name: Add resume PDF
