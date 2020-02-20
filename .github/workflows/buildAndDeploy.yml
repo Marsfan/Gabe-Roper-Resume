@@ -1,0 +1,45 @@
+name: Build PDF for Release
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2.0.0
+
+            - name: Install Dependencies
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y texlive-xetex
+            - name: Build Document
+              run: xelatex Resume.tex
+
+            - name: Get Current DateTime
+              id: getdate
+              run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
+
+            - name: Create Release
+              uses: actions/create-release@v1
+              id: create_release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+              with:
+                  tag_name: ${{steps.getdate.outputs.dtVal}}
+                  release_name: Resume ${{steps.getdate.outputs.dtVal}}
+                  draft: true
+                  prerelease: false
+
+            - name: Add resume PDF
+              uses: actions/upload-release-asset@v1.0.2
+              env:
+                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+              with:
+                  upload_url: ${{ steps.create_release.outputs.upload_url }}
+                  asset_path: ./Resume.pdf
+                  asset_name: Resume.pdf
+                  asset_content_type: application/pdf
