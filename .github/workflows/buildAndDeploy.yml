@@ -4,8 +4,8 @@ on:
     push:
         branches:
             - master
-        tags:
-            - !nochange**   # Do not build a new version of the resume if commit does not have content chenqes in the tex file.
+        tags-ignore:
+            - nochange**   # Do not build a new version of the resume if commit does not have content chenqes in the tex file.
 
 jobs:
     build:
