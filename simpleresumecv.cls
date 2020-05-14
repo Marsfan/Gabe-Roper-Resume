@@ -225,6 +225,16 @@ BoldItalicFont=Tinos-BoldItalic]
 	\par%
 }
 
+% YearRange command used to diplay range between two years.
+\newcommand{\yearRange}[2]{\DatestampY{#1} -- \DatestampY{#2}}
+% ymRange is the same as yearRange, but includes monts
+\newcommand{\ymRange}[4]{\DatestampYM{#1}{#2} -- \DatestampYM{#3}{#4}}
+
+% Format Specification for summarizing each job position
+\newcommand{\positionSummary}[1]{\begin{Detail}\textit{#1}\end{Detail}}
+
+
+
 % Macro: SmallGap(small vertical gap between items in the same section)
 \newcommand{\SmallGap}{\par\vspace{0.5mm}\par}
 % Macro: Gap (vertical gap between items in the same section).
