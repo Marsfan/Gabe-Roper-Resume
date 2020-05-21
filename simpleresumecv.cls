@@ -257,13 +257,24 @@ BoldItalicFont=Tinos-BoldItalic]
 \newcommand{\ymRange}[4]{\DatestampYM{#1}{#2} -- \DatestampYM{#3}{#4}}
 
 % Format Specification for summarizing each job position
-\newcommand{\positionSummary}[1]{\begin{Detail}\textit{#1}\end{Detail}}
 
 % Format Specification for name of position and year range
-\newcommand{\PositionY}[3]{\Entry\textbf{#1}\hfill\yearRange{#2}{#3}}
+\newcommand{\PositionY}[4]{
+    \Entry\textbf{#1}\hfill\yearRange{#2}{#3}
+    \begin{Description}
+        #4
+    \end{Description}
+    }
 
-% Format Specification for name of position and year-month range
-\newcommand{\PositionYM}[5]{\Entry\textbf{#1}\hfill\ymRange{#2}{#3}{#4}{#5}}
+
+% Format Specification for position with year-month range
+\newcommand{\PositionYM}[7]{
+    \Entry\textbf{#1}\hfill\ymRange{#2}{#3}{#4}{#5}
+    \begin{Detail}\textit{#6}\end{Detail}
+    \begin{Description}
+        #7
+    \end{Description}}
+
 
 % Command for a row of the skills table
 \newcommand{\skillCategory}[2]{
