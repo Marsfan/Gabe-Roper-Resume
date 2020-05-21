@@ -200,6 +200,32 @@ BoldItalicFont=Tinos-BoldItalic]
 	\UseSubTitleFont}
 {\par\endgroup\par}
 
+% Enviroment for detailed description of the position
+\newenvironment{Description}
+{%
+	\SmallGap
+	\par
+	\begin{Detail}
+		\Item
+		\begin{minipage}{\descriptionWidth}
+}
+{\par
+\end{minipage}
+\end{Detail}
+}
+
+% Environment for the table of skills
+\newenvironment{skillTable}
+{
+    \def\arraystretch{0}%  1 is the default, change whatever you need
+    \hspace*{-0.8em}
+    \begin{tabular}[t]{p{11em} p{\tableWidth}}
+}
+{
+    \vspace{-1em}
+    \end{tabular}
+}
+
 % Macro: Body (rest of the document).
 \newenvironment{Body}
 {%
@@ -225,15 +251,35 @@ BoldItalicFont=Tinos-BoldItalic]
 	\par%
 }
 
-% YearRange command used to diplay range between two years.
-\newcommand{\yearRange}[2]{\DatestampY{#1} -- \DatestampY{#2}}
-% ymRange is the same as yearRange, but includes monts
-\newcommand{\ymRange}[4]{\DatestampYM{#1}{#2} -- \DatestampYM{#3}{#4}}
-
-% Format Specification for summarizing each job position
-\newcommand{\positionSummary}[1]{\begin{Detail}\textit{#1}\end{Detail}}
 
 
+
+% Format Specification for name of position and year range
+\newcommand{\PositionY}[4]{
+    \Entry\textbf{#1}\hfill\DatestampY{#2}-- \DatestampY{#3}
+    \begin{Description}
+        #4
+    \end{Description}
+    }
+
+
+% Format Specification for position with year-month range
+\newcommand{\PositionYM}[7]{
+    \Entry\textbf{#1}\hfill\DatestampYM{#2}{#3} -- \DatestampYM{#4}{#5}
+    \begin{Detail}\textit{#6}\end{Detail}
+    \begin{Description}
+        #7
+    \end{Description}
+    }
+
+
+% Command for a row of the skills table
+\newcommand{\skillCategory}[2]{
+    \textit{#1}&
+    \begin{Detail}
+        #2
+    \end{Detail}
+}
 
 % Macro: SmallGap(small vertical gap between items in the same section)
 \newcommand{\SmallGap}{\par\vspace{0.5mm}\par}
@@ -244,8 +290,8 @@ BoldItalicFont=Tinos-BoldItalic]
 \newcommand{\BigGap}{\par\vspace{2mm}\par}
 
 % Macro: Section (new section for Education, Research Experience, etc.).
-\newcommand{\Section}[3]
-{\par\pdfbookmark[2]{#2}{#3}%
+\newcommand{\Section}[1]
+{\par\pdfbookmark[2]{#1}{PDF: #1}%
 	\item[\smash{\parbox[t]{1.2in}{\UseSectionFont\raggedright\MakeUppercase{#1}}}]%
 	\par}
 
