@@ -273,7 +273,8 @@ BoldItalicFont=Tinos-BoldItalic]
     \begin{Detail}\textit{#6}\end{Detail}
     \begin{Description}
         #7
-    \end{Description}}
+    \end{Description}
+    }
 
 
 % Command for a row of the skills table
