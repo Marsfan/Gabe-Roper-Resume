@@ -214,6 +214,7 @@ BoldItalicFont=Tinos-BoldItalic]
 \end{Detail}
 }
 
+% Environment for the table of skills
 \newenvironment{skillTable}
 {
     \def\arraystretch{0}%  1 is the default, change whatever you need
@@ -264,6 +265,13 @@ BoldItalicFont=Tinos-BoldItalic]
 % Format Specification for name of position and year-month range
 \newcommand{\PositionYM}[5]{\Entry\textbf{#1}\hfill\ymRange{#2}{#3}{#4}{#5}}
 
+% Command for a row of the skills table
+\newcommand{\skillCategory}[2]{
+    \textit{#1}&
+    \begin{Detail}
+        #2
+    \end{Detail}
+}
 
 % Macro: SmallGap(small vertical gap between items in the same section)
 \newcommand{\SmallGap}{\par\vspace{0.5mm}\par}
