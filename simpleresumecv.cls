@@ -244,8 +244,8 @@ BoldItalicFont=Tinos-BoldItalic]
 \newcommand{\BigGap}{\par\vspace{2mm}\par}
 
 % Macro: Section (new section for Education, Research Experience, etc.).
-\newcommand{\Section}[2]
-{\par\pdfbookmark[2]{#2}{PDF: #2}%
+\newcommand{\Section}[1]
+{\par\pdfbookmark[2]{#1}{PDF: #1}%
 	\item[\smash{\parbox[t]{1.2in}{\UseSectionFont\raggedright\MakeUppercase{#1}}}]%
 	\par}
 
