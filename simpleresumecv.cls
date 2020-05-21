@@ -233,6 +233,8 @@ BoldItalicFont=Tinos-BoldItalic]
 % Format Specification for summarizing each job position
 \newcommand{\positionSummary}[1]{\begin{Detail}\textit{#1}\end{Detail}}
 
+% Format Specification for name of job and year range
+\newcommand{\Position}[5]{\Entry\textbf{#1}\hfill\ymRange{#2}{#3}{#4}{#5}}
 
 
 % Macro: SmallGap(small vertical gap between items in the same section)
