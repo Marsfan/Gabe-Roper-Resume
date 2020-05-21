@@ -200,6 +200,21 @@ BoldItalicFont=Tinos-BoldItalic]
 	\UseSubTitleFont}
 {\par\endgroup\par}
 
+% Enviroment for detailed description of the position
+\newenvironment{Description}
+{%
+	\SmallGap
+	\par
+	\begin{Detail}
+		\Item
+		\begin{minipage}{\descriptionWidth}
+}
+{\par
+\end{minipage}
+\end{Detail}
+}
+
+
 % Macro: Body (rest of the document).
 \newenvironment{Body}
 {%
