@@ -196,9 +196,7 @@
 		\Gap
 		\Section{Skills}
             % The hspace is needed here to shift this over correctly.
-            \def\arraystretch{0}%  1 is the default, change whatever you need
-            \hspace*{-0.8em}
-            \begin{tabular}[t]{p{11em} p{\tableWidth}}
+            \begin{skillTable}
                 \textit{Engineering Software} &
                 \begin{Detail}
                     SOLIDWORKS, KiCAD, LabVIEW, MakerBot Desktop, CATIA, Eagle, PyCharm, IAR Embedded Workbench, Git, ANSYS Mechanical Workbench
@@ -219,9 +217,8 @@
                 \begin{Detail}
                     Woodworking, Soldering, PCB Design, 3D Printing, Amplifier Design, Control Systems, Signal Analysis, Cypress PSOC, TI Launchpad
                 \end{Detail}
-                \vspace{-1em}
 
-            \end{tabular} % For some reason, the tabular enviroment is adding an extra space at the end. This removes it
+            \end{skillTable} % For some reason, the tabular enviroment is adding an extra space at the end. This removes it
 
 		\Section{Licenses and Certifications}
 

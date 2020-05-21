@@ -214,6 +214,16 @@ BoldItalicFont=Tinos-BoldItalic]
 \end{Detail}
 }
 
+\newenvironment{skillTable}
+{
+    \def\arraystretch{0}%  1 is the default, change whatever you need
+    \hspace*{-0.8em}
+    \begin{tabular}[t]{p{11em} p{\tableWidth}}
+}
+{
+    \vspace{-1em}
+    \end{tabular}
+}
 
 % Macro: Body (rest of the document).
 \newenvironment{Body}
