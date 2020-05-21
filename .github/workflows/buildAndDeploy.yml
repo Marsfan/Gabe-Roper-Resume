@@ -22,6 +22,9 @@ jobs:
                   sudo apt-get install -y texlive-xetex
             - name: Build Document
               run: xelatex Resume.tex
+          
+            - name: Rename Document
+              run: mv Resume.pdf Gabriel_Roper_Resume.pdf
 
             - name: Get Current DateTime
               id: getdate
@@ -44,6 +47,6 @@ jobs:
                   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
               with:
                   upload_url: ${{ steps.create_release.outputs.upload_url }}
-                  asset_path: ./Resume.pdf
-                  asset_name: Resume.pdf
+                  asset_path: ./Gabriel_Roper_Resume.pdf
+                  asset_name: Gabriel_Roper_Resume.pdf
                   asset_content_type: application/pdf
