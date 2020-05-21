@@ -251,16 +251,12 @@ BoldItalicFont=Tinos-BoldItalic]
 	\par%
 }
 
-% YearRange command used to diplay range between two years.
-\newcommand{\yearRange}[2]{\DatestampY{#1} -- \DatestampY{#2}}
-% ymRange is the same as yearRange, but includes monts
-\newcommand{\ymRange}[4]{\DatestampYM{#1}{#2} -- \DatestampYM{#3}{#4}}
 
-% Format Specification for summarizing each job position
+
 
 % Format Specification for name of position and year range
 \newcommand{\PositionY}[4]{
-    \Entry\textbf{#1}\hfill\yearRange{#2}{#3}
+    \Entry\textbf{#1}\hfill\DatestampY{#2}-- \DatestampY{#3}
     \begin{Description}
         #4
     \end{Description}
@@ -269,7 +265,7 @@ BoldItalicFont=Tinos-BoldItalic]
 
 % Format Specification for position with year-month range
 \newcommand{\PositionYM}[7]{
-    \Entry\textbf{#1}\hfill\ymRange{#2}{#3}{#4}{#5}
+    \Entry\textbf{#1}\hfill\DatestampYM{#2}{#3} -- \DatestampYM{#4}{#5}
     \begin{Detail}\textit{#6}\end{Detail}
     \begin{Description}
         #7
