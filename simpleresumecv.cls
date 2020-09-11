@@ -58,8 +58,8 @@
 \RequirePackage[
 left=0.70in,
 right=0.70in,
-top=0.5in,
-bottom=0.45in,
+top=0.3in,
+bottom=0.3in,
 nohead,
 includefoot]{geometry}
 
@@ -260,6 +260,7 @@ BoldItalicFont=Tinos-BoldItalic]
     \begin{Description}
         #4
     \end{Description}
+    \Gap
     }
 
 
@@ -270,6 +271,7 @@ BoldItalicFont=Tinos-BoldItalic]
     \begin{Description}
         #7
     \end{Description}
+    \Gap
     }
 
 
