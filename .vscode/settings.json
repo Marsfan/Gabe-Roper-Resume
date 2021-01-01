@@ -9,5 +9,8 @@
         "pdfproducer",
         "pdfstartview",
         "pdfsubject"
+    ],
+    "cSpell.enableFiletypes": [
+        "latex"
     ]
 }
