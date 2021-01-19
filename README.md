@@ -1,6 +1,6 @@
 # simple-resume-cv
 
-Download the latest version of my resume as a pdf [here](https://github.com/Marsfan/Gabriel-Roper-Resume/releases/latest/download/Resume.pdf)
+Download the latest version of my resume as a pdf [here](https://github.com/Marsfan/Gabriel-Roper-Resume/releases/latest/download/Gabriel_Roper_Resume.pdf)
 
 This repository contains my resume, written in LaTeX. It reqires XeLaTeX to compile as
 XeLaTeX supports the use of external fonts like I have implemented.
