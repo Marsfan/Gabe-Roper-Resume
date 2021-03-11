@@ -1,4 +1,4 @@
-# simple-resume-cv
+# My Resume
 
 Download the latest version of my resume as a pdf [here](https://github.com/Marsfan/Gabriel-Roper-Resume/releases/latest/download/Gabriel_Roper_Resume.pdf)
 
