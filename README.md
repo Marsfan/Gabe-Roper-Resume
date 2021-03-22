@@ -8,7 +8,7 @@ XeLaTeX supports the use of external fonts like I have implemented.
 The formatting of the resume is a modified version of
 [zachscrivena's simple-resume-cs template](https://github.com/zachscrivena/simple-resume-cv).
 Please see his repository for documentation on how to use the template, but note that I have made
-my modifications have removed some commands from the class.
+modifications that have removed some commands from the class.
 
 Feel free to use this as the template for creating your own resume.
 
