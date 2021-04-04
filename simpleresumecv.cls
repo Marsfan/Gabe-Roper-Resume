@@ -55,11 +55,12 @@
 \LoadClass[10pt,oneside]{article}
 
 % Geometry package for page margins.
+% TODO: Figure out what is wrong with the margin here
 \RequirePackage[
 left=0.70in,
 right=0.70in,
 top=0.3in,
-bottom=0.3in,
+bottom=0in,
 nohead,
 includefoot]{geometry}
 
@@ -260,7 +261,7 @@ BoldItalicFont=Tinos-BoldItalic]
     \begin{Description}
         #4
     \end{Description}
-    \Gap
+    % \Gap
     }
 
 
