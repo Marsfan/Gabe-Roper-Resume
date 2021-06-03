@@ -264,7 +264,7 @@ BoldItalicFont=Tinos-BoldItalic]
 
             #4 %, Robotics Track % Add this in if applying for a robotics job.
             \ifthenelse{\equal{#6}{true}}
-                {\hfill Graduated #5}
+                {\hfill #5}
                 % else
                 {\hfill Expected Graduation #5}
             
