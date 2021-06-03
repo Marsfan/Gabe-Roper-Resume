@@ -10,6 +10,8 @@
 %% public domain; see <http://unlicense.org> for details.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{ifthen}
+
 \NeedsTeXFormat{LaTeX2e}
 
 \ProvidesClass{simpleresumecv}[2016/12/25 Simple Resume CV https://github.com/zachscrivena/simple-resume-cv]
@@ -253,7 +255,24 @@ BoldItalicFont=Tinos-BoldItalic]
 }
 
 
+% Format Specification for education info
+% format: \UnivInfo{UniveristyName}{univURL}{UniversityLocation}{Degree}{Graduation Date}{HaveGraduatedBool}{GPA}
+\newcommand{\UnivInfo}[7]{
+            \Entry
+            \href{#2}{\textbf{#1}}
+            \hfill #3
 
+            #4 %, Robotics Track % Add this in if applying for a robotics job.
+            \ifthenelse{\equal{\lowercase{#6}}{true}}
+                {\hfill Graduated #5}
+                % else
+                {\hfill Expected Graduation #5}
+                \lowercase{#6}
+            
+
+            %Concentration: Robotics
+            \hfill GPA: #7
+}
 
 % Format Specification for name of position and year range
 \newcommand{\PositionY}[4]{

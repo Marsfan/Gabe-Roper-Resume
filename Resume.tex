@@ -25,7 +25,6 @@
 % CV Info
 \newcommand{\CVAuthor}{Gabriel Roper}
 \newcommand{\CVTitle}{Gabriel Roper's Resume}
-\newcommand{\CVNote}{CV compiled on {\today}}
 \newcommand{\LinkedInPage}{https://www.linkedin.com/in/gabriel-roper/}
 \newcommand{\GithubPage}{https://www.github.com/Marsfan}
 \newcommand{\emailAddress}{gabrielcroper@gmail.com}
@@ -33,7 +32,7 @@
 \newcommand{\phoneNumber}{469-264-4980}
 \newcommand{\descriptionWidth}{33em}
 \newcommand{\tableWidth}{23.5em}
-\newcommand{\GPA}{3.520}
+\newcommand{\GPA}{3.383}
 
 
 
@@ -86,15 +85,11 @@
 
 		\Section{Education}
 
-            \Entry
-            \href{https://prescott.erau.edu}{\textbf{Embry-Riddle Aeronautical University}}
-            \hfill Prescott, Arizona
-
-            Bachelor of Science in Electrical Engineering %, Robotics Track % Add this in if applying for a robotics job.
-            \hfill May 2021
-
-            %Concentration: Robotics
-            \hfill GPA: \GPA
+            \UnivInfo{Embry-Riddle Aeronautical University}{https://prescott.erau.edu}
+            {Prescott, Arizona}
+            {Bachelor of Science in Electrical Engineering}
+            {May 2021}{true}
+            {\GPA}
 
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		%% Leadership Activities %%
@@ -102,13 +97,13 @@
 
 		\Section{Activities/ Leadership}
 
-            \PositionY{EagleSat}{2017}{Present}
+            \PositionY{EagleSat}{2017}{2021}
                 {Member of the Electrical Power System team, developing the
                     power subsystems for a student-designed and -built
                     cubesat that will analyze the effect of cosmic radiation on
                     flash memory and look for cosmic rays.}
 
-            \PositionY{Eagle Aero Sport}{2017}{Present}
+            \PositionY{Eagle Aero Sport}{2017}{2021}
                 {Member of electrical engineering team that is mounting a number of sensors
                     to a student-built Van's RV-12 Light Sport Aircraft for analyzing the
                     stress and aerodynamic effects on the aircraft.}
@@ -119,7 +114,7 @@
                 %	\BulletItem{Co-Captain, Fall 2016-Spring 2017}
                 %	\BulletItem{Fundraising Leader, Sprint 2014-Spring 2017}}
 
-            \PositionY{Eagle Amateur Radio Club}{2017}{Present}
+            \PositionY{Eagle Amateur Radio Club}{2017}{2021}
                 {Student-run organization that helps promote amateur
                     radio at the university and provides access to amateur
                     radio hardware for students to use.
@@ -143,9 +138,9 @@
         %    {Project currently developing a pulsed plasma thruster
         %        for cubesat spacecraft.}
 
-        \PositionY{Senior Capstone}{2020}{2021}
+        \PositionY{Dynamic and Kinematic Quadrupedal Robot Motion Planning}{2020}{2021}
         {Designed, built, and tested a quadraped walking robot that 
-        is capable of autonomous mapping and navigation}
+        is capable of fully automatic leg motion planning (research paper in preparation), as well as autonomous mapping and navigation.}
 
 
 		%%%%%%%%%%%%%%%%%%%%%
@@ -173,10 +168,10 @@
                 {Developed software for analyzing human-spacesuit interaction to improve the ergonomics
                     of spacesuits.}
 
-            \PositionYM{Usedave.com}{2015}{06}{2015}{08}
-                {Freelance 3D Modeling}
-                {Created 3D models using Blender and Sketchup for corporate
-                    internal marketing comic book.}
+           % \PositionYM{Usedave.com}{2015}{06}{2015}{08}
+           %     {Freelance 3D Modeling}
+           %     {Created 3D models using Blender and Sketchup for corporate
+           %         internal marketing comic book.}
 
 
 
@@ -211,11 +206,12 @@
 		%%%%%%%%%%%%
 
 		\Section{Awards}
-            \Entry NASA High School Aerospace Scholar
+            %\Entry NASA High School Aerospace Scholar
             \Entry IEEE Phoenix Section Student Scholarship Mahesh K. Shah Award
             % \Entry National Merit Commended Student
             \Entry Eagle Scout
             \Entry Embry-Riddle Aeronautical University Dean's List
+            \Entry Graduated Embry Riddle Aeronautical University Cum Laude
 	\end{Body}
 
 \end{document}
