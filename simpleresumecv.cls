@@ -263,11 +263,10 @@ BoldItalicFont=Tinos-BoldItalic]
             \hfill #3
 
             #4 %, Robotics Track % Add this in if applying for a robotics job.
-            \ifthenelse{\equal{\lowercase{#6}}{true}}
+            \ifthenelse{\equal{#6}{true}}
                 {\hfill Graduated #5}
                 % else
                 {\hfill Expected Graduation #5}
-                \lowercase{#6}
             
 
             %Concentration: Robotics
