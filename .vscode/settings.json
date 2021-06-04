@@ -14,13 +14,24 @@
         "latex"
     ],
     "latex-workshop.latex.recipes": [
-
         {
-            "name": "latexmk 🔃",
+            "name": "xelatex",
             "tools": [
-                "latexmk -recorder"
+                "xelatex",
             ]
         },
-       
-    ]
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                // "-cd",
+                "--output-directory=%DIR%/temp",
+                "-recorder",
+                "%DOC_W32%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.rootFile.useSubFile": false
 }
