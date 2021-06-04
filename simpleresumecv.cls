@@ -257,21 +257,13 @@ BoldItalicFont=Tinos-BoldItalic]
 
 % Format Specification for education info
 % format: \UnivInfo{UniveristyName}{univURL}{UniversityLocation}{Degree}{Graduation Date}{HaveGraduatedBool}{GPA}
-\newcommand{\UnivInfo}[7]{
+\newcommand{\UnivInfo}[6]{
             \Entry
             \href{#2}{\textbf{#1}}
-            \hfill #3
-
-            #4 %, Robotics Track % Add this in if applying for a robotics job.
-            \ifthenelse{\equal{#6}{true}}
-                {\hfill #5}
-                % else
-                {\hfill Expected Graduation #5}
-            
-
-            %Concentration: Robotics
-            \hfill GPA: #7
-}
+            \hfill #3\\
+            #4\hfill #5\\
+            \hfill GPA: #6
+            }
 
 % Format Specification for name of position and year range
 \newcommand{\PositionY}[4]{
