@@ -30,9 +30,6 @@ jobs:
                   sudo apt-get install -y texlive-xetex
             - name: Build Document
               run: xelatex Gabriel_Roper_Resume.tex
-          
-            # - name: Rename Document
-            #   run: mv Resume.pdf Gabriel_Roper_Resume.pdf
 
             - name: Get Current DateTime
               id: getdate
