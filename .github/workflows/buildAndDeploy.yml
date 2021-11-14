@@ -30,7 +30,7 @@ jobs:
               run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
 
             - name: Create Release
-              uses: softprops/action-gh-release@v0.1
+              uses: softprops/action-gh-release@v0.1.13
               if: ${{ github.ref == 'refs/heads/master' }}
               with:
                   files: Gabriel_Roper_Resume.pdf
