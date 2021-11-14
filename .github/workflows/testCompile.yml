@@ -1,0 +1,23 @@
+name: Check For Errors
+on:
+    push:
+        branches-ignore: 
+            - master  # Do not check against the master branch, as this is already checked by the build and deploy script
+    pull_request:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Install Dependencies
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y texlive-xetex
+            
+            - name: Build and Check Document
+              run: xelatex Gabriel_Roper_Resume.tex
+
+
