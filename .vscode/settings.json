@@ -26,10 +26,11 @@
             "name": "xelatex",
             "command": "xelatex",
             "args": [
-                // "-cd",
-                "--output-directory=%DIR%/temp",
-                "-recorder",
-                "%DOC_W32%"
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-max-print-line=999999",
+                "-file-line-error",
+                "%DOC%"
             ]
         }
     ],
