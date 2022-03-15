@@ -10,7 +10,7 @@
 \addtolength{\parskip}{-0.5mm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%	Uncomment to display a grid on the document to help with alinement	%%
+%%    Uncomment to display a grid on the document to help with alinement    %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{background}
 %\newlength\mylen
@@ -29,7 +29,6 @@
 \newcommand{\LinkedInPage}{https://www.linkedin.com/in/gabriel-roper/}
 \newcommand{\GithubPage}{https://www.github.com/Marsfan}
 \newcommand{\emailAddress}{gabrielcroper@gmail.com}
-\newcommand{\streetAddress}{}
 \newcommand{\phoneNumber}{469-264-4980}
 \newcommand{\descriptionWidth}{33em}
 \newcommand{\tableWidth}{23.5em}
@@ -40,21 +39,20 @@
 
 % PDF settings and properties.
 \hypersetup{
-	pdftitle={\CVTitle},
-	pdfauthor={\CVAuthor},
-	pdfsubject={\LinkedInPage},
-	pdfcreator={XeLaTeX},
-	pdfproducer={},
-	pdfkeywords={},
-	unicode=true,
-	bookmarks=true,
-	bookmarksopen=true,
-	pdfstartview=FitH,
-	pdfpagelayout=OneColumn,
-	pdfpagemode=UseOutlines,
-	hidelinks,
-	breaklinks}
-
+    pdftitle={\CVTitle},
+    pdfauthor={\CVAuthor},
+    pdfsubject={\LinkedInPage},
+    pdfcreator={XeLaTeX},
+    pdfproducer={},
+    pdfkeywords={},
+    unicode=true,
+    bookmarks=true,
+    bookmarksopen=true,
+    pdfstartview=FitH,
+    pdfpagelayout=OneColumn,
+    pdfpagemode=UseOutlines,
+    hidelinks,
+    breaklinks}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,46 +60,48 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-	%%%%%%%%%%%%%%%
-	% TITLE BLOCK %
-	%%%%%%%%%%%%%%%
-	\Title{\CVAuthor}
+    %%%%%%%%%%%%%%%
+    % TITLE BLOCK %
+    %%%%%%%%%%%%%%%
+    \Title{\CVAuthor}
 
-	\begin{SubTitle}
-		{\streetAddress}
-		\par
-		\href{mailto:\emailAddress}{\emailAddress}
-		\BulletSymbol
-		\,\,\phoneNumber\,
-		\BulletSymbol
-		\,\,\href{\LinkedInPage}{\url{\LinkedInPage}}
-		\BulletSymbol
-		\,\,\href{\GithubPage}{\url{\GithubPage}}
-	\end{SubTitle}
+    \begin{SubTitle}
+        \href{mailto:\emailAddress}{\emailAddress}
+        \BulletSymbol\space
+        {\phoneNumber}
+        \BulletSymbol\space
+        \href{\LinkedInPage}{\url{\LinkedInPage}}
+        \BulletSymbol\space
+        \href{\GithubPage}{\url{\GithubPage}}
+    \end{SubTitle}
 
-	\begin{Body}
+    %%%%%%%%%%%%%%%
+    % BODY BLOCK  %
+    %%%%%%%%%%%%%%%
+
+    \begin{Body}
 
 
-		\Section{Education}
+        \Section{Education}
 
             \UnivInfo{Embry-Riddle Aeronautical University}{https://prescott.erau.edu}
             {Prescott, Arizona}
-            {\Major} 
+            {\Major}
             {May 2021}{\GPA}
 
-            
-        \subfile{sections/activities}
+
+        \subfile{sections/work_experience}
 
         \subfile{sections/research}
 
-        \subfile{sections/work_experience}
-        
-		\subfile{sections/skills}
+        \subfile{sections/activities}
+
+        \subfile{sections/skills}
 
         \subfile{sections/license_cert}
 
         \subfile{sections/awards}
 
-	\end{Body}
+    \end{Body}
 
 \end{document}
