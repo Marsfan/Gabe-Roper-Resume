@@ -59,12 +59,12 @@
 % Geometry package for page margins.
 % TODO: Figure out what is wrong with the margin here
 \RequirePackage[
-left=0.70in,
-right=0.70in,
-top=0.3in,
-bottom=0in,
-nohead,
-includefoot]{geometry}
+	left=0.70in,
+	right=0.70in,
+	top=0.3in,
+	bottom=0in,
+	nohead,
+	includefoot]{geometry}
 
 % PDF settings and properties.
 \RequirePackage{hyperref}
@@ -73,7 +73,6 @@ includefoot]{geometry}
 \RequirePackage[none]{hyphenat}
 
 % Current date and time.
-\RequirePackage{datetime2}
 
 % Timestamp.
 \newcommand{\Timestamp}{{\DTMnow}}
@@ -114,7 +113,7 @@ includefoot]{geometry}
 \RequirePackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
 \RequirePackage{xunicode}
-\RequirePackage{xltxtra}
+
 
 % Font: Use "Tinos" as the main typeface (\textnormal{}, \normalfont).
 % The "Tinos" fonts are released under the Apache License Version 2.0,
@@ -122,9 +121,9 @@ includefoot]{geometry}
 % Symbol table: <http://www.fileformat.info/info/unicode/font/tinos/grid.htm>
 \setmainfont
 [Path=./Fonts/Tinos/,
-ItalicFont=Tinos-Italic,
-BoldFont=Tinos-Bold,
-BoldItalicFont=Tinos-BoldItalic]
+	ItalicFont=Tinos-Italic,
+	BoldFont=Tinos-Bold,
+	BoldItalicFont=Tinos-BoldItalic]
 {Tinos-Regular.ttf}
 
 % Secondary font: "GNU FreeFont".
@@ -133,9 +132,9 @@ BoldItalicFont=Tinos-BoldItalic]
 % for free at <https://savannah.gnu.org/projects/freefont/>.
 \newcommand{\UseSecondaryFont}{\fontspec
 	[Path=./Fonts/GNUFreeFont/,
-	ItalicFont=FreeSerifItalic,
-	BoldFont=FreeSerifBold,
-	BoldItalicFont=FreeSerifBoldItalic]
+		ItalicFont=FreeSerifItalic,
+		BoldFont=FreeSerifBold,
+		BoldItalicFont=FreeSerifBoldItalic]
 	{FreeSerif.otf}}
 
 % Sans-serif font: Changed to "Tinos".
@@ -211,22 +210,22 @@ BoldItalicFont=Tinos-BoldItalic]
 	\begin{Detail}
 		\Item
 		\begin{minipage}{\descriptionWidth}
-}
-{\par
-\end{minipage}
-\end{Detail}
+			}
+			{\par
+		\end{minipage}
+	\end{Detail}
 }
 
 % Environment for the table of skills
 \newenvironment{skillTable}
 {
-    \def\arraystretch{0}%  1 is the default, change whatever you need
-    \hspace*{-0.8em}
-    \begin{tabular}[t]{p{11em} p{\tableWidth}}
-}
-{
-    \vspace{-1em}
-    \end{tabular}
+	\def\arraystretch{0}%  1 is the default, change whatever you need
+	\hspace*{-0.8em}
+	\begin{tabular}[t]{p{11em} p{\tableWidth}}
+		}
+		{
+		\vspace{-1em}
+	\end{tabular}
 }
 
 % Macro: Body (rest of the document).
@@ -248,8 +247,8 @@ BoldItalicFont=Tinos-BoldItalic]
 			\setlength\partopsep{0in}%
 			\raggedright%
 		}%
-	}
-	{%
+		}
+		{%
 	\end{list}%
 	\par%
 }
@@ -258,40 +257,40 @@ BoldItalicFont=Tinos-BoldItalic]
 % Format Specification for education info
 % format: \UnivInfo{UniveristyName}{univURL}{UniversityLocation}{Degree}{Graduation Date}{HaveGraduatedBool}{GPA}
 \newcommand{\UnivInfo}[6]{
-            \Entry
-            \href{#2}{\textbf{#1}}
-            \hfill #3\\
-            #4\hfill #5\\
-            \hfill GPA: #6
-            }
+	\Entry
+	\href{#2}{\textbf{#1}}
+	\hfill #3\\
+	#4\hfill #5\\
+	\hfill GPA: #6
+}
 
 % Format Specification for name of position and year range
 \newcommand{\PositionY}[4]{
-    \Entry\textbf{#1}\hfill\DatestampY{#2}-- \DatestampY{#3}
-    \begin{Description}
-        #4
-    \end{Description}
-    % \Gap
-    }
+	\Entry\textbf{#1}\hfill\DatestampY{#2}-- \DatestampY{#3}
+	\begin{Description}
+		#4
+	\end{Description}
+	% \Gap
+}
 
 
 % Format Specification for position with year-month range
 \newcommand{\PositionYM}[7]{
-    \Entry\textbf{#1}\hfill\DatestampYM{#2}{#3} -- \DatestampYM{#4}{#5}
-    \begin{Detail}\textit{#6}\end{Detail}
-    \begin{Description}
-        #7
-    \end{Description}
-    \Gap
-    }
+	\Entry\textbf{#1}\hfill\DatestampYM{#2}{#3} -- \DatestampYM{#4}{#5}
+	\begin{Detail}\textit{#6}\end{Detail}
+	\begin{Description}
+		#7
+	\end{Description}
+	\Gap
+}
 
 
 % Command for a row of the skills table
 \newcommand{\skillCategory}[2]{
-    \textit{#1}&
-    \begin{Detail}
-        #2
-    \end{Detail}
+	\textit{#1}&
+	\begin{Detail}
+		#2
+	\end{Detail}
 }
 
 % Macro: SmallGap(small vertical gap between items in the same section)
