@@ -126,16 +126,6 @@
 	BoldItalicFont=Tinos-BoldItalic]
 {Tinos-Regular.ttf}
 
-% Secondary font: "GNU FreeFont".
-% The "GNU FreeFont" fonts are released under the
-% GNU General Public License Version 3, and can be downloaded
-% for free at <https://savannah.gnu.org/projects/freefont/>.
-\newcommand{\UseSecondaryFont}{\fontspec
-	[Path=./Fonts/GNUFreeFont/,
-		ItalicFont=FreeSerifItalic,
-		BoldFont=FreeSerifBold,
-		BoldItalicFont=FreeSerifBoldItalic]
-	{FreeSerif.otf}}
 
 % Sans-serif font: Changed to "Tinos".
 \renewcommand{\sffamily}{\rmfamily}
