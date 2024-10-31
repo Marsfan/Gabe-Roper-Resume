@@ -9,8 +9,6 @@ on:
         tags-ignore:
             - nochange**   # Do not build a new version for any commit tagged with a tag that starts with nochange
     workflow_dispatch:
-        
-                
             
 
 jobs:
@@ -33,22 +31,8 @@ jobs:
               run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
 
             - name: Create Release
-              uses: actions/create-release@v1
+              uses: softprops/action_gh_release@v2
               id: create_release
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
               with:
-                  tag_name: ${{steps.getdate.outputs.dtVal}}
-                  release_name: Resume ${{steps.getdate.outputs.dtVal}}
-                  draft: false
-                  prerelease: false
-
-            - name: Add resume PDF
-              uses: actions/upload-release-asset@v1
-              env:
-                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-              with:
-                  upload_url: ${{ steps.create_release.outputs.upload_url }}
-                  asset_path: ./Gabriel_Roper_Resume.pdf
-                  asset_name: Gabriel_Roper_Resume.pdf
-                  asset_content_type: application/pdf
+                  file: Gabriel_Roper_Resume.pdf
+                  name: Resume ${{steps.getdate.outputs.dtVal}}
