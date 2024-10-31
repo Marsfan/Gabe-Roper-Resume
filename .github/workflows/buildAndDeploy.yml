@@ -36,3 +36,4 @@ jobs:
               with:
                   files: Gabriel_Roper_Resume.pdf
                   name: Resume ${{steps.getdate.outputs.dtVal}}
+                  tag_name: ${{steps.getdate.outputs.dtVal}}
