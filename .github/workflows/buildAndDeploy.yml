@@ -26,6 +26,10 @@ jobs:
             - name: Build Document
               run: xelatex Gabriel_Roper_Resume.tex
 
+              # For some reason, the bookmarks don't work unless the document is built twice.
+            - name: Build Document Again
+              run: xelatex Gabriel_Roper_Resume.tex
+
             - name: Get Current DateTime
               id: getdate
               run: echo "::set-output name=dtVal::$(date +'%Y-%m-%d_%H.%M')"
