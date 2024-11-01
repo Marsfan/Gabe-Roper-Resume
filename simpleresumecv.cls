@@ -254,22 +254,30 @@
 	\hfill GPA: #6
 }
 
+
+% Create Href, but only if the URL field is not blank
+% Args: URL, text to display
+\newcommand{\OptionalUrl}[2]{
+	\ifthenelse{\equal{#1}{}}{#2}{\href{#1}{#2}}
+}
+
 % Format Specification for name of position and year range
-\newcommand{\PositionY}[4]{
-	\Entry\textbf{#1}\hfill\DatestampY{#2}-- \DatestampY{#3}
+% Args: Name, URL, Start Year, End Year, description.
+\newcommand{\PositionY}[5]{
+	\Entry\textbf{\OptionalUrl{#2}{#1}}\hfill\DatestampY{#3}-- \DatestampY{#4}
 	\begin{Description}
-		#4
+		#5
 	\end{Description}
 	% \Gap
 }
 
 
 % Format Specification for position with year-month range
-\newcommand{\PositionYM}[7]{
-	\Entry\textbf{#1}\hfill\DatestampYM{#2}{#3} -- \DatestampYM{#4}{#5}
-	\begin{Detail}\textit{#6}\end{Detail}
+\newcommand{\PositionYM}[8]{
+	\Entry\textbf{\OptionalUrl{#2}{#1}}\hfill\DatestampYM{#3}{#4} -- \DatestampYM{#5}{#6}
+	\begin{Detail}\textit{#7}\end{Detail}
 	\begin{Description}
-		#7
+		#8
 	\end{Description}
 	\Gap
 }
