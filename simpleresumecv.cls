@@ -251,7 +251,7 @@
 	\href{#2}{\textbf{#1}}
 	\hfill #3\\
 	#4\hfill #5\\
-	\hfill GPA: #6
+	% \hfill GPA: #6
 }
 
 
