@@ -34,21 +34,21 @@
 
 % Datestamp format: {yyyy}{MM}{dd} ---> dd MMM yyyy (e.g., 15 Jan 2008).
 \DeclareOption{ddMMMyyyy}{%
-	\renewcommand{\DatestampYMD}[3]{\mbox{#3 \ShortMonth{#2} #1}}
-	\renewcommand{\DatestampYM}[2]{\mbox{\ShortMonth{#2} #1}}
-	\renewcommand{\DatestampY}[1]{#1}}
+    \renewcommand{\DatestampYMD}[3]{\mbox{#3 \ShortMonth{#2} #1}}
+    \renewcommand{\DatestampYM}[2]{\mbox{\ShortMonth{#2} #1}}
+    \renewcommand{\DatestampY}[1]{#1}}
 
 % Datestamp format: {yyyy}{MM}{dd} ---> MMMM yyyy (e.g., January 2008).
 \DeclareOption{MMMMyyyy}{%
-	\renewcommand{\DatestampYMD}[3]{\mbox{\LongMonth{#2} #1}}
-	\renewcommand{\DatestampYM}[2]{\mbox{\LongMonth{#2} #1}}
-	\renewcommand{\DatestampY}[1]{#1}}
+    \renewcommand{\DatestampYMD}[3]{\mbox{\LongMonth{#2} #1}}
+    \renewcommand{\DatestampYM}[2]{\mbox{\LongMonth{#2} #1}}
+    \renewcommand{\DatestampY}[1]{#1}}
 
 % Datestamp format: {yyyy}{MM}{dd} ---> dd MMMM yyyy (e.g., 15 January 2008).
 \DeclareOption{ddMMMMyyyy}{%
-	\renewcommand{\DatestampYMD}[3]{\mbox{#3 \LongMonth{#2} #1}}
-	\renewcommand{\DatestampYM}[2]{\mbox{\LongMonth{#2} #1}}
-	\renewcommand{\DatestampY}[1]{#1}}
+    \renewcommand{\DatestampYMD}[3]{\mbox{#3 \LongMonth{#2} #1}}
+    \renewcommand{\DatestampYM}[2]{\mbox{\LongMonth{#2} #1}}
+    \renewcommand{\DatestampY}[1]{#1}}
 
 \ProcessOptions\relax
 
@@ -59,12 +59,12 @@
 % Geometry package for page margins.
 % TODO: Figure out what is wrong with the margin here
 \RequirePackage[
-	left=0.70in,
-	right=0.70in,
-	top=0.3in,
-	bottom=0in,
-	nohead,
-	includefoot]{geometry}
+    left=0.70in,
+    right=0.70in,
+    top=0.3in,
+    bottom=0in,
+    nohead,
+    includefoot]{geometry}
 
 % PDF settings and properties.
 \RequirePackage{hyperref}
@@ -79,35 +79,35 @@
 
 % Abbreviations for months.
 \newcommand{\LongMonth}[1]{%
-	\ifcase#1\relax
-	\or January%
-	\or February%
-	\or March%
-	\or April%
-	\or May%
-	\or June%
-	\or July%
-	\or August%
-	\or September%
-	\or October%
-	\or November%
-	\or December%
-	\fi}
+    \ifcase#1\relax
+    \or January%
+    \or February%
+    \or March%
+    \or April%
+    \or May%
+    \or June%
+    \or July%
+    \or August%
+    \or September%
+    \or October%
+    \or November%
+    \or December%
+    \fi}
 \newcommand{\ShortMonth}[1]{%
-	\ifcase#1\relax
-	\or Jan%
-	\or Feb%
-	\or Mar%
-	\or Apr%
-	\or May%
-	\or Jun%
-	\or Jul%
-	\or Aug%
-	\or Sep%
-	\or Oct%
-	\or Nov%
-	\or Dec%
-	\fi}
+    \ifcase#1\relax
+    \or Jan%
+    \or Feb%
+    \or Mar%
+    \or Apr%
+    \or May%
+    \or Jun%
+    \or Jul%
+    \or Aug%
+    \or Sep%
+    \or Oct%
+    \or Nov%
+    \or Dec%
+    \fi}
 
 % XeLaTeX packages.
 \RequirePackage{fontspec}
@@ -121,9 +121,9 @@
 % Symbol table: <http://www.fileformat.info/info/unicode/font/tinos/grid.htm>
 \setmainfont
 [Path=./Fonts/Tinos/,
-	ItalicFont=Tinos-Italic,
-	BoldFont=Tinos-Bold,
-	BoldItalicFont=Tinos-BoldItalic]
+    ItalicFont=Tinos-Italic,
+    BoldFont=Tinos-Bold,
+    BoldItalicFont=Tinos-BoldItalic]
 {Tinos-Regular.ttf}
 
 
@@ -158,10 +158,10 @@
 \newcommand{\FooterText}{\hfill\hfill}
 
 \def\ps@plain{%
-	\def\@oddhead{\HeaderText}%
-	\def\@evenhead{\HeaderText}%
-	\def\@oddfoot{\FooterText}%
-	\def\@evenfoot{\FooterText}}
+    \def\@oddhead{\HeaderText}%
+    \def\@evenhead{\HeaderText}%
+    \def\@oddfoot{\FooterText}%
+    \def\@evenfoot{\FooterText}}
 
 \pagestyle{plain}
 
@@ -180,126 +180,126 @@
 
 % Macro: Title (name).
 \newcommand{\Title}[1]{%
-	\par\pdfbookmark[1]{#1}{#1}%
-	\begingroup\centering%
-	\UseTitleFont{#1}%
-	\par\endgroup\par}
+    \par\pdfbookmark[1]{#1}{#1}%
+    \begingroup\centering%
+    \UseTitleFont{#1}%
+    \par\endgroup\par}
 
 % Macro: SubTitle (personal information below name).
 \newenvironment{SubTitle}
 {\par\vspace{0.25\baselineskip}%
-	\begingroup\centering%
-	\UseSubTitleFont}
+    \begingroup\centering%
+    \UseSubTitleFont}
 {\par\endgroup\par}
 
 % Enviroment for detailed description of the position
 \newenvironment{Description}
 {%
-	\SmallGap
-	\par
-	\begin{Detail}
-		\Item
-		\begin{minipage}{\descriptionWidth}
-			}
-			{\par
-		\end{minipage}
-	\end{Detail}
+    \SmallGap
+    \par
+    \begin{Detail}
+        \Item
+        \begin{minipage}{\descriptionWidth}
+            }
+            {\par
+        \end{minipage}
+    \end{Detail}
 }
 
 % Environment for the table of skills
 \newenvironment{skillTable}
 {
-	\def\arraystretch{0}%  1 is the default, change whatever you need
-	\hspace*{-0.8em}
-	\begin{tabular}[t]{p{11em} p{\tableWidth}}
-		}
-		{
-		\vspace{-1em}
-	\end{tabular}
+    \def\arraystretch{0}%  1 is the default, change whatever you need
+    \hspace*{-0.8em}
+    \begin{tabular}[t]{p{11em} p{\tableWidth}}
+        }
+        {
+        \vspace{-1em}
+    \end{tabular}
 }
 
 % Macro: Body (rest of the document).
 \newenvironment{Body}
 {%
-	\par\vspace{1.5\baselineskip}%
-	\begin{list}
-		{}
-		{\setlength\leftmargin{1.2in}%
-			\setlength\rightmargin{0in}%
-			\setlength\labelwidth{1.2in}%
-			\setlength\labelsep{0in}%
-			\setlength\listparindent{0in}%
-			\setlength\itemindent{0in}%
-			\setlength\parskip{0in}%
-			\setlength\topsep{0in}%
-			\setlength\parsep{0in}%
-			\setlength\itemsep{.7\baselineskip}%
-			\setlength\partopsep{0in}%
-			\raggedright%
-		}%
-		}
-		{%
-	\end{list}%
-	\par%
+    \par\vspace{1.5\baselineskip}%
+    \begin{list}
+        {}
+        {\setlength\leftmargin{1.2in}%
+            \setlength\rightmargin{0in}%
+            \setlength\labelwidth{1.2in}%
+            \setlength\labelsep{0in}%
+            \setlength\listparindent{0in}%
+            \setlength\itemindent{0in}%
+            \setlength\parskip{0in}%
+            \setlength\topsep{0in}%
+            \setlength\parsep{0in}%
+            \setlength\itemsep{.7\baselineskip}%
+            \setlength\partopsep{0in}%
+            \raggedright%
+        }%
+        }
+        {%
+    \end{list}%
+    \par%
 }
 
 
 % Format Specification for education info
 % format: \UnivInfo{UniveristyName}{univURL}{UniversityLocation}{Degree}{Graduation Date}{HaveGraduatedBool}{GPA}
 \newcommand{\UnivInfo}[6]{
-	\Entry
-	\href{#2}{\textbf{#1}}
-	\hfill #3\\
-	#4\hfill #5\\
-	% \hfill GPA: #6
+    \Entry
+    \href{#2}{\textbf{#1}}
+    \hfill #3\\
+    #4\hfill #5\\
+    % \hfill GPA: #6
 }
 
 
 % Create Href, but only if the URL field is not blank
 % Args: URL, text to display
 \newcommand{\OptionalUrl}[2]{
-	\ifthenelse{\equal{#1}{}}{#2}{\href{#1}{#2}}
+    \ifthenelse{\equal{#1}{}}{#2}{\href{#1}{#2}}
 }
 
 % Format specification for name of positions without date
 % Args: Name, URL, Description. Leave URL blank to not add hyperlink
 \newcommand{\Position}[3]{
-	\Entry\textbf{\OptionalUrl{#2}{#1}}
-	\begin{Description}
-		#3
-	\end{Description}
-	% \Gap
+    \Entry\textbf{\OptionalUrl{#2}{#1}}
+    \begin{Description}
+        #3
+    \end{Description}
+    \Gap
 }
 
 % Format Specification for name of position and year range
 % Args: Name, URL, Start Year, End Year, description.
 % Leave URL blank to not add hyperlink
 \newcommand{\PositionY}[5]{
-	\Entry\textbf{\OptionalUrl{#2}{#1}}\hfill\DatestampY{#3}-- \DatestampY{#4}
-	\begin{Description}
-		#5
-	\end{Description}
-	% \Gap
+    \Entry\textbf{\OptionalUrl{#2}{#1}}\hfill\DatestampY{#3}-- \DatestampY{#4}
+    \begin{Description}
+        #5
+    \end{Description}
+    \Gap
 }
 
 
 % Format Specification for position with year-month range
 \newcommand{\PositionYM}[8]{
-	\Entry\textbf{\OptionalUrl{#2}{#1}}\hfill\DatestampYM{#3}{#4} -- \DatestampYM{#5}{#6}
-	\begin{Detail}\textit{#7}\end{Detail}
-	\begin{Description}
-		#8
-	\end{Description}
-	\Gap
+    \Entry\textbf{\OptionalUrl{#2}{#1}}\hfill\DatestampYM{#3}{#4} -- \DatestampYM{#5}{#6}
+    \begin{Detail}\textit{#7}\end{Detail}
+    \begin{Description}
+        #8
+    \end{Description}
+    \Gap
 }
 
 
 % Command for a row of the skills table
 \newcommand{\skillCategory}[2]{
-	\textit{#1}&
-	\begin{Detail}
-		#2
-	\end{Detail}
+    \textit{#1}&
+    \begin{Detail}
+        #2
+    \end{Detail}
 }
 
 % Macro: SmallGap(small vertical gap between items in the same section)
@@ -313,14 +313,14 @@
 % Macro: Section (new section for Education, Research Experience, etc.).
 \newcommand{\Section}[1]
 {\par\pdfbookmark[2]{#1}{PDF: #1}%
-	\item[\smash{\parbox[t]{1.2in}{\UseSectionFont\raggedright\MakeUppercase{#1}}}]%
-	\par}
+    \item[\smash{\parbox[t]{1.2in}{\UseSectionFont\raggedright\MakeUppercase{#1}}}]%
+    \par}
 
 % Macro: SubSection.
 \newcommand{\SubSection}[3]
 {\par\pdfbookmark[3]{#2}{#3}%
-	{\UseSubSectionFont\raggedright\MakeUppercase{#1}}%
-	\par}
+    {\UseSubSectionFont\raggedright\MakeUppercase{#1}}%
+    \par}
 
 % Macro: Detail (text in smaller font under an item).
 \newenvironment{Detail}
@@ -333,9 +333,9 @@
 %
 \newcommand{\BulletItem}[1]
 {\par\vspace{0\baselineskip}%
-	\savebox{\BulletItemIndentBox}{\hspace{1.5mm}\BulletSymbol\hspace{1.5mm}}%
-	\usebox{\BulletItemIndentBox}%
-	\ignorespaces #1\\%
+    \savebox{\BulletItemIndentBox}{\hspace{1.5mm}\BulletSymbol\hspace{1.5mm}}%
+    \usebox{\BulletItemIndentBox}%
+    \ignorespaces #1\\%
 }
 
 % Macro: SubBulletItem.
@@ -344,33 +344,33 @@
 %
 \newcommand{\SubBulletItem}[1]
 {\par\vspace{0\baselineskip}%
-	\savebox{\SubBulletItemIndentBox}{\hspace{1.5mm}\SubBulletSymbol\hspace{1.5mm}}
-	\usebox{\SubBulletItemIndentBox}%
-	\ignorespaces #1%
+    \savebox{\SubBulletItemIndentBox}{\hspace{1.5mm}\SubBulletSymbol\hspace{1.5mm}}
+    \usebox{\SubBulletItemIndentBox}%
+    \ignorespaces #1%
 }
 
 % Macro: Entry.
 \newcommand{\Entry}
 {\par\vspace{0\baselineskip}%
-	\parshape 1%
-	\labelwidth \linewidth%
-	\ignorespaces%
+    \parshape 1%
+    \labelwidth \linewidth%
+    \ignorespaces%
 }
 
 % Macro: Item (aligns horizontally with BulletItem).
 \newcommand{\Item}
 {\par\vspace{0\baselineskip}%
-	\savebox{\BulletItemIndentBox}{\hphantom{\hspace{1.5mm}\BulletSymbol\hspace{1.5mm}}}%
-	\usebox{\BulletItemIndentBox}%
-	\ignorespaces%
+    \savebox{\BulletItemIndentBox}{\hphantom{\hspace{1.5mm}\BulletSymbol\hspace{1.5mm}}}%
+    \usebox{\BulletItemIndentBox}%
+    \ignorespaces%
 }
 
 % Macro: SubItem (aligns horizontally with SubBulletItem).
 \newcommand{\SubItem}
 {\par\vspace{0\baselineskip}%
-	\savebox{\SubBulletItemIndentBox}{\hphantom{\hspace{5.6mm}\SubBulletSymbol\hspace{1.5mm}}}%
-	\usebox{\SubBulletItemIndentBox}%
-	\ignorespaces%
+    \savebox{\SubBulletItemIndentBox}{\hphantom{\hspace{5.6mm}\SubBulletSymbol\hspace{1.5mm}}}%
+    \usebox{\SubBulletItemIndentBox}%
+    \ignorespaces%
 }
 
 % Macro: Hide.
