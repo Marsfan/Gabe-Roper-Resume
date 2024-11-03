@@ -261,8 +261,19 @@
 	\ifthenelse{\equal{#1}{}}{#2}{\href{#1}{#2}}
 }
 
+% Format specification for name of positions without date
+% Args: Name, URL, Description. Leave URL blank to not add hyperlink
+\newcommand{\Position}[3]{
+	\Entry\textbf{\OptionalUrl{#2}{#1}}
+	\begin{Description}
+		#3
+	\end{Description}
+	% \Gap
+}
+
 % Format Specification for name of position and year range
 % Args: Name, URL, Start Year, End Year, description.
+% Leave URL blank to not add hyperlink
 \newcommand{\PositionY}[5]{
 	\Entry\textbf{\OptionalUrl{#2}{#1}}\hfill\DatestampY{#3}-- \DatestampY{#4}
 	\begin{Description}
